@@ -1,0 +1,16 @@
+# node module files
+/node_modules
+
+# visual studio code local configs
+.vscode
+
+# build directory
+/dist
+
+# environment variables
+.env
+
+# misc
+package-lock.json
+debug.log*
+

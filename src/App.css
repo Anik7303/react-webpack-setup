@@ -1,0 +1,17 @@
+.App {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: red;
+    color: white;
+    font-size: 1.4rem;
+
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 300;
+}
