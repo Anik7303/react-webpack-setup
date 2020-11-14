@@ -1,11 +1,15 @@
+$width: 100%;
+$color: greenyellow;
+
 .app {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
+    width: $width;
     height: 100vh;
+    color: $color;
 }
 
 .heading-1 {

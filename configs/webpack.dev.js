@@ -3,10 +3,11 @@ const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 
 const common = require("./webpack.common");
+const { CSSLoader, SASSLoader } = require("./loader.dev");
 
 const config = {
     mode: "development",
-    devtool: "source-map",
+    devtool: "eval-source-map",
     devServer: {
         port: 3000,
         open: true,
@@ -14,6 +15,9 @@ const config = {
         watchContentBase: true,
         liveReload: true,
         hot: false,
+    },
+    module: {
+        rules: [CSSLoader, SASSLoader],
     },
     plugins: [new webpack.HotModuleReplacementPlugin()],
 };

@@ -1,10 +1,9 @@
 const path = require("path");
 const webpack = require("webpack");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const { JSLoader, CSSLoader, FileLoader } = require("./loaders");
+const { JSLoader, FileLoader, UrlLoader } = require("./loader.common");
 
 const config = {
     entry: path.resolve(__dirname, "../src/index.js"),
@@ -14,17 +13,16 @@ const config = {
         filename: path.join("static", "js", "[name].[contenthash].js"),
     },
     module: {
-        rules: [JSLoader, CSSLoader, FileLoader],
+        rules: [JSLoader, FileLoader, UrlLoader],
     },
     plugins: [
         new webpack.ProgressPlugin(),
-        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "../public/index.html"),
             favicon: path.resolve(__dirname, "../public/favicon.ico"),
         }),
         new MiniCssExtractPlugin({
-            filename: "/static/css/[name].[contenthash].css",
+            filename: path.join("static", "css", "[name].[contenthash].css"),
         }),
     ],
     optimization: {
