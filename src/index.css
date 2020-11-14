@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: white;
+    animation: bgRepeat 6s linear infinite alternate;
+}
+
+@keyframes bgRepeat {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: green;
+    }
+}

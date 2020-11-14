@@ -1,0 +1,13 @@
+# vscode configs
+/.vscode
+
+# module files
+/node_modules
+
+# build folder
+/dist
+
+# misc
+package-lock.json
+debug.log*
+
