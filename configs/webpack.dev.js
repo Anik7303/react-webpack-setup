@@ -13,8 +13,8 @@ const config = {
         open: true,
         contentBase: path.resolve(__dirname, "../public/"),
         watchContentBase: true,
-        liveReload: true,
-        hot: false,
+        liveReload: false,
+        hot: true,
     },
     module: {
         rules: [CSSLoader, SASSLoader],

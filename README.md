@@ -1,5 +1,31 @@
 ## Webpack Setup for React:
 
+#### Live-reload:
+
+```javascript
+// webpack config file export
+module.exports = {
+    mode: "development",
+    devServer: {
+        liveReload: true,
+    },
+};
+```
+
+#### Hot-reload:
+
+```javascript
+// webpack config file export
+module.exports = {
+    mode: "development",
+    devServer: {
+        liveReload: false,
+        hot: true,
+    },
+    plugins: [new webpack.HotModuleReplacementPlugin()],
+};
+```
+
 #### Loaders:
 
 -   js:

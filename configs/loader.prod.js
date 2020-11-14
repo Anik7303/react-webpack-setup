@@ -1,4 +1,3 @@
-const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const postcssPlugins = {
@@ -13,7 +12,7 @@ const postcssPlugins = {
 const CSSLoader = {
     test: /\.css$/i,
     use: [
-        { loader: MiniCssExtractPlugin.loader },
+        MiniCssExtractPlugin.loader,
         { loader: "css-loader", options: { sourceMap: true } },
         {
             loader: "postcss-loader",
@@ -28,7 +27,7 @@ const CSSLoader = {
 const SASSLoader = {
     test: /\.s[ac]ss$/i,
     use: [
-        { loader: MiniCssExtractPlugin.loader },
+        MiniCssExtractPlugin.loader,
         { loader: "css-loader", options: { importLoaders: 1, sourceMap: true } },
         {
             loader: "postcss-loader",

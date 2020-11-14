@@ -12,7 +12,7 @@ const postcssPlugins = {
 const CSSLoader = {
     test: /\.css$/i,
     use: [
-        { loader: "style-loader" },
+        "style-loader",
         { loader: "css-loader", options: { sourceMap: true } },
         {
             loader: "postcss-loader",
@@ -27,7 +27,7 @@ const CSSLoader = {
 const SASSLoader = {
     test: /\.s[ac]ss$/i,
     use: [
-        { loader: "style-loader" },
+        "style-loader",
         { loader: "css-loader", options: { importLoaders: 1, sourceMap: true } },
         {
             loader: "postcss-loader",
